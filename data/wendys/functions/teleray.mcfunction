@@ -3,7 +3,7 @@ scoreboard objectives add teleray dummy
 # Commands
 tag @s add .temp
 #particle crit ~ ~ ~ 0 0 0 0 1
-tag @e[distance=..1.5,tag=!.temp,type=!#wendys:nosel] add k.telekinating
+execute as @e[distance=..1.5,tag=!.temp,type=!#wendys:nosel] unless score @s k.telekiuuid matches -2147483647..2147483647 run tag @s add k.telekinating
 execute as @e[tag=k.telekinating] run function wendys:teleki
 
 # Repeat
